@@ -1,4 +1,3 @@
-// es6 语法
 import Vue from '../node_modules/vue/dist/vue.min.js';
 import app from './components/app';
 

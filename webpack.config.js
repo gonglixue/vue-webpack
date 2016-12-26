@@ -11,12 +11,12 @@ module.exports = {
 	},
 
 	devServer:{
-		contentBase:"./dist",  //本地服务器所加载的页面所在的目录
+
 		colors: true,  //终端输出结果为彩色？
 		historyApiFallback: true,  //不跳转
 		inline: true, //实时刷新
 		progress:true,
-		hot:true,
+		hot:false,
 	},
 
 	module:{
@@ -26,15 +26,15 @@ module.exports = {
 			{test:/\.js$/, loader:'babel',exclude:/node_modules/},
 			{test: /\.vue$/, loader:'vue'},
 			// 编译css并自动添加css前缀？
-			{test:/\.css$/,loader:'style!css!autoprefixer'},
-			{text:/\.scss$/,loader:'style!css!sass?sourceMap'},
+			{ test: /\.css$/, loader: 'style!css!autoprefixer'},
+			{ test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
 			{text:/\.(html|tpl)$/, loader:'html-loader'}, //html模板编译
 		]
 	},
 	// 单独vue配置，好像没什么必要
 	vue:{
 		loaders:{
-			css:'style!css!autoprefixer',
+			css:'style!css!autoprefixer!sass?sourceMap',
 		}
 	},
 	babel:{
