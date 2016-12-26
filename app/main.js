@@ -1,10 +1,7 @@
-require('./main.css');
-var Vue = require('vue');
-var greeter = require('./greeter.js');
-document.getElementById('root').appendChild(greeter())
+// es6 语法
+import Vue from '../node_modules/vue/dist/vue.min.js';
+import app from './components/app';
 
-new Vue({
-	data:{
-		message:'hello vue.js'
-	}
-}).$mount('#app')
+Vue.config.debug = true;
+
+new Vue(app);
