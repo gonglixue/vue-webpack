@@ -28,8 +28,15 @@ module.exports = {
 			}
 		]
 	},
+	resolve: {
+		extensions: ['', '.js', '.vue'],
+		alias: {
+			'vue$': 'vue/dist/vue.js'
+		}
+	},
 	plugins:[
-		new Webpack.BannerPlugin("这里是打包文件头部注释！")  //注意这是一个数组.. 这些文字会出现在bundle.js头部
+		new Webpack.BannerPlugin("这里是打包文件头部注释！"),  //注意这是一个数组.. 这些文字会出现在bundle.js头部
+		new Webpack.HotModuleReplacementPlugin()
 	]
 
 }

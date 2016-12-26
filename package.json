@@ -14,6 +14,10 @@
     "file-loader": "^0.9.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "vue-loader": "^10.0.2",
     "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "vue": "^2.1.7"
   }
 }
